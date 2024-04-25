@@ -5,15 +5,14 @@ import {router as userRouter} from "./router/user.routes.js"
 import {router as actionRouter} from "./router/action.router.js"
 import {router as employeeRouter} from "./router/employeelist.router.js"
 import session from "express-session";
-
+import { MemoryStore } from "express-session";
 const server = express();
 
 server.use(express.urlencoded({extended:true}))
 server.set('view engine', 'ejs');
-const memoryStore = new session.MemoryStore();
 server.use(session({
     secret:"key",
-    store: memoryStore,
+    store: new MemoryStore({ checkPeriod: 86400 }),
     resave:false,
     saveUninitialized:true,
 }))
