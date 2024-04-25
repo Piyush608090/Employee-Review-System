@@ -5,12 +5,17 @@ import {router as userRouter} from "./router/user.routes.js"
 import {router as actionRouter} from "./router/action.router.js"
 import {router as employeeRouter} from "./router/employeelist.router.js"
 import session from "express-session";
-
+import trustproxy from "trustproxy"
 const server = express();
+server.set('trust proxy', 1);
 server.use(express.urlencoded({extended:true}))
 server.set('view engine', 'ejs');
 server.use(session({
     secret:"key",
+    cookie:{
+    secure: true,
+    maxAge:60000,
+       },
     resave:false,
     saveUninitialized:true,
 }))
