@@ -10,8 +10,10 @@ const server = express();
 
 server.use(express.urlencoded({extended:true}))
 server.set('view engine', 'ejs');
+const memoryStore = new session.MemoryStore();
 server.use(session({
     secret:"key",
+    store: memoryStore,
     resave:false,
     saveUninitialized:true,
 }))
