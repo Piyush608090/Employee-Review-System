@@ -11,8 +11,13 @@ console.log(err)
 }  
 export const deleteEmployee = async (req,res) =>{
     const user = await User.findById(req.params.id)
-    await user.deleteOne();
+    const users = await User.find({})
+    if(user.permission == "Admin"){
+    res.render("employeesection",{users:users,errorMessage:"First Remove From Admin than you can delete it"})
+    }else{
+    await user.deleteOne();    
     res.redirect("/employeesection/employeelist")
+}
 }
 export const updateEmployee = async (req,res)=>{
     const {name,email,password} = req.body;
