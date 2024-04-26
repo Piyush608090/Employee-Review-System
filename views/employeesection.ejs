@@ -29,9 +29,15 @@
               </head>
         </head>
         <body>
+
 <div id="main-div">
     <h1>All Employees List</h1>
-    <hr>
+    <%if(errorMessage){%>
+      <div class="alert alert-danger" role="alert">
+        <%= errorMessage %>
+        </div>
+      <%}%>
+      <hr>    
     <div id="headings">
         <p>Name</p>
         <p>Email</p>
