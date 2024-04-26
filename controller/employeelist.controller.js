@@ -4,7 +4,7 @@ import {User} from "../schema/user.schema.js";
 export const employeeSection = async (req,res) =>{
 try{ 
 const users = await User.find({})
-res.render("employeesection",{users:users})
+res.render("employeesection",{users:users,errorMessage:null})
 }catch(err){
 console.log(err)
 }
