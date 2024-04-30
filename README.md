@@ -1,7 +1,8 @@
 # Employee-Review-System
 A Web application using node js and Express Server,Ejs-layoutes,Session,Mongoose,Mongodb,Populate These Are the Node Js Features which i used to create this Employee Review System
-![Screenshot (3)](https://github.com/Piyush608090/Employee-Review-System/assets/119125610/e0a1bd54-b4dd-415e-94f7-77f87a8ff6ff)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Login Page where you can login and admin email is admin123@gmail.com and password is admin1 you can Change admin after login by clicking on make admin button
+![Screenshot (3)](https://github.com/Piyush608090/Employee-Review-System/assets/119125610/e0a1bd54-b4dd-415e-94f7-77f87a8ff6ff)
 ![Screenshot (9)](https://github.com/Piyush608090/Employee-Review-System/assets/119125610/d1ffc24b-2b4d-43b0-9a7d-cdfaae73779d)
 Employee View where he see there reviews by other employees and give review to other employees
 ![Screenshot (4)](https://github.com/Piyush608090/Employee-Review-System/assets/119125610/94ca20b6-a8d2-4d66-8ebc-18e64c533b31)
